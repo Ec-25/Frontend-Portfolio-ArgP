@@ -1,8 +1,10 @@
 :root {
-  --bg-body : #0f0f0f;
-  --bg-card : #2f2f2f;
-  --ft : #f0f0f0;
-  --ft-sub : #a0a0a0;
+  --bg-body: #ffffff;
+  --bg-card: #f0f0f0;
+  --bg-global: #437c98;
+  --ft: #f0f0f0;
+  --ft-sub: #a0a0a0;
+  --ft-global: #437c98;
 }
 
 * {
@@ -15,4 +17,65 @@ body {
   background-color: var(--bg-body);
   color: var(--ft);
   font-family: monospace;
+}
+
+h1 {
+  font-size: 64px;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 52px;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 48px;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 32px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 24px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+h6 {
+  font-size: 16px;
+  text-decoration: none;
+  font-style: italic;
+}
+
+a,
+p {
+  font-size: 24px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #a0a0a0;
+  border: 4px solid #a0a0a0;
+  border-radius: 6px;
+  padding: 2px;
+  cursor: pointer;
 }
