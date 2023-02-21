@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-body);
   color: var(--ft);
@@ -62,9 +66,18 @@ p {
   font-style: normal;
 }
 
+p {
+  text-indent: 64px;
+}
+
 li {
   list-style: none;
   text-decoration: none;
+}
+
+.title {
+  color: var(--ft-global);
+  margin-bottom: 16px;
 }
 
 .btn {
@@ -78,4 +91,13 @@ li {
   border-radius: 6px;
   padding: 2px;
   cursor: pointer;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 32px;
+  width: 80%;
+  margin-left: 10%;
+  padding: 64px;
+  margin-bottom: 64px;
 }

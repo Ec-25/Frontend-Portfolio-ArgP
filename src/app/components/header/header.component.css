@@ -34,16 +34,8 @@ header>.right>.right__social>a {
     margin-right: 16px;
 }
 
-header>.right>.right__social>a>img {
+header>.right>.right__social>a>img,
+header>.right>.right__login>a>img  {
     width: 42px;
     height: 42px;
-}
-
-header>.right>.right__login>button {
-    border-color: black;
-}
-
-header>.right>.right__login>button>img {
-    width: 36px;
-    height: 36px;
 }
