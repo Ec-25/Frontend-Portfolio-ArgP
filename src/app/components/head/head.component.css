@@ -1,0 +1,32 @@
+.banner>img {
+    width: 100%;
+    height: 60vh;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.2);
+}
+
+.profile {
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+}
+
+.profile>img {
+    width: 256px;
+    height: 256px;
+    border: 8px solid var(--bg-global);
+    border-radius: 256px;
+}
+
+.profile>h5 {
+    margin-left: 64px;
+}
+
+.profile>h6 {
+    margin-left: 128px;
+}
+
+.labels>p {
+    margin-top: 128px;
+    margin-left: 512px;
+    margin-bottom: 128px;
+}
