@@ -23,6 +23,7 @@ header>.left>.left__img>img {
 
 header>.right {
     width: 50%;
+    
     display: flex;
     text-align: center;
     align-items: center;
@@ -30,12 +31,17 @@ header>.right {
     margin-right: 24px;
 }
 
-header>.right>.right__social>a {
-    margin-right: 16px;
+header>div.right a {
+    
 }
 
-header>.right>.right__social>a>img,
-header>.right>.right__login>a>img  {
+header>div.right a>img {
     width: 42px;
     height: 42px;
+    margin-right: 16px;
+    transition: all 200ms;
+}
+
+header>div.right a>img:hover {
+    background-color: #6b8b9b;
 }

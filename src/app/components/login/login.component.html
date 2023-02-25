@@ -1,0 +1,15 @@
+<button class="home" type="button" routerLink="/"> <img src="assets/icons/arrow-up-left.svg" alt="arrow-left"> Volver</button>
+<div class="card">
+    <h1 class="title">Ingreso</h1>
+    <form class="container" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div>
+            <h3 class="subtitle">Usuario:</h3>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="name" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Contraseña:</h3>
+            <input type="password" id="password" name="password" placeholder="Contraseña" [(ngModel)]="password" required>
+        </div>
+        <button type="submit" class="submit">Ingresar</button>
+    </form>
+</div>

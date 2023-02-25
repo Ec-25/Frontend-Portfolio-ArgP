@@ -6,7 +6,7 @@
 
 .profile {
     position: absolute;
-    top: 60vh;
+    top: 55vh;
     left: 10vw;
 }
 
@@ -27,6 +27,6 @@
 
 .labels>p {
     margin-top: 128px;
-    margin-left: 512px;
-    margin-bottom: 74px;
+    margin-left: 576px;
+    margin-bottom: 44px;
 }

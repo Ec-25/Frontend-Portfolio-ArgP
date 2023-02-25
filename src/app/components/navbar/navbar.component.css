@@ -3,18 +3,26 @@ nav {
     top: 0;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
     width: 100%;
     height: 54px;
-    background-color: var(--bg-card);
+    background-color: var(--bg-global);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
     margin-bottom: 32px;
 }
 
 nav>a {
-    color: var(--ft-global);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--ft);
     text-shadow: 4px 4px 8px rgba(0, 0, 0, .3);
     text-decoration: none;
+    transition: all 200ms;
+}
+
+nav>a:hover {
+    background-color: #6b8b9b;
 }

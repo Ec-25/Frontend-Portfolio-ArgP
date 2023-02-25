@@ -1,6 +1,7 @@
 footer {
     display: flex;
-    background-color: var(--bg-card);
+    background-color: var(--bg-global);
+    color: var(--ft);
     width: 100%;
     height: 64px;
     padding: auto;
