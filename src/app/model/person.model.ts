@@ -1,11 +1,11 @@
 export class person {
     id?: number;
-    name: String;
-    title: String;
-    labels: String;
-    photo: String;
+    name: string;
+    title: string;
+    labels: string;
+    photo: string;
 
-    constructor(name:String, title:String, labels:String, photo:String) {
+    constructor(name:string, title:string, labels:string, photo:string) {
         this.name = name;
         this.title = title;
         this.labels = labels;

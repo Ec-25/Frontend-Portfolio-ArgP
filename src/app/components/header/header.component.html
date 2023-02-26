@@ -17,7 +17,8 @@
           src="assets/icons/github.svg" alt="Github"></a>
     </div>
     <div class="right__login">
-      <a routerLink="login"><img src="assets/icons/log-in.svg" alt="Login"></a>
+      <a routerLink="login" *ngIf="!isLogged"><img src="assets/icons/log-in.svg" alt="LogIn"></a>
+      <a (click)="onLogOut()" *ngIf="isLogged"><img src="assets/icons/log-out.svg" alt="LogOut"></a>
     </div>
   </div>
 </header>
