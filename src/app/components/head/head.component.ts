@@ -8,7 +8,7 @@ import { PersonService } from 'src/app/service/person.service';
   styleUrls: ['./head.component.css']
 })
 export class HeadComponent implements OnInit{
-  person: person = new person("","","","");
+  person: person = new person("","","","","");
 
   constructor(public personService: PersonService) { }
 
