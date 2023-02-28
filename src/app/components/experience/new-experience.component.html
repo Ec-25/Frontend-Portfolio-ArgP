@@ -1,0 +1,15 @@
+<button class="home" type="button" routerLink=""> <img src="assets/icons/arrow-up-left.svg" alt="arrow-left"> Volver</button>
+<div class="card">
+    <h1 class="title">Crear Experiencia</h1>
+    <form (ngSubmit)="onCrate()" novalidate #f="ngForm">
+        <div>
+            <h3 class="subtitle">Labor:</h3>
+            <input type="text" id="experience" name="experience" placeholder="Experiencia" [(ngModel)]="experience" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Experiencia:</h3>
+            <input type="text" id="description" name="description" placeholder="Descripcion" [(ngModel)]="description" required>
+        </div>
+        <button type="submit" class="submit">Añadir</button>
+    </form>
+</div>

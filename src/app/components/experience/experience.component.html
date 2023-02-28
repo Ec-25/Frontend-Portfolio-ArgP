@@ -1,4 +1,28 @@
 <div class="card" id="experience">
-    <h1 class="title">Experiencia</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio dignissimos neque eligendi, consequuntur nobis laudantium earum suscipit enim doloribus deleniti minus non omnis reiciendis. Beatae non quos similique reiciendis commodi officiis pariatur molestias enim corrupti veniam omnis eius, laborum itaque nam, cumque cum exercitationem veritatis facilis, ipsum eveniet distinctio. Voluptatum reiciendis repellendus quod a exercitationem, illo recusandae! Labore perferendis eaque nihil voluptates, ducimus cum. Ipsum consequuntur beatae aut! Culpa nisi impedit odio animi fugiat delectus omnis. Harum soluta nihil distinctio quos laudantium minima nesciunt sequi ipsa sunt beatae cupiditate incidunt, est earum rerum facilis eveniet? Obcaecati hic ad dolores eum maxime corrupti officiis aut asperiores doloremque similique id quis aliquam numquam mollitia animi consectetur perferendis ducimus labore, in voluptate. Doloremque similique recusandae corrupti autem?</p>
+  <h1 class="title">Experiencia</h1>
+  <button type="button" *ngIf="isLogged" routerLink="add-experience">Añadir Experiencia</button>
+  <table>
+    <tbody>
+      <tr class="head">
+        <td>Labor</td>
+        <td>Descripcion</td>
+        <td class="action" *ngIf="isLogged">Editar</td>
+        <td class="action" *ngIf="isLogged">Borrar</td>
+      </tr>
+      <tr *ngFor="let exp of experience">
+        <td>{{exp.experience}}</td>
+        <td>{{exp.description}}</td>
+        <td class="action" *ngIf="isLogged">
+          <button type="button" routerLink="/upd-experience/{{exp.id}}">
+            <img src="assets/icons/edit-3.svg" alt="edit">
+          </button>
+        </td>
+        <td class="action" *ngIf="isLogged">
+          <button type="button" (click)="deleteExperience(exp.id)">
+            <img src="assets/icons/trash-2.svg" alt="delete">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
