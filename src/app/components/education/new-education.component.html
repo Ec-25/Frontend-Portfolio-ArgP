@@ -1,0 +1,15 @@
+<button class="home" type="button" routerLink=""> <img src="assets/icons/arrow-up-left.svg" alt="arrow-left"> Volver</button>
+<div class="card">
+    <h1 class="title">Añadir Educacion</h1>
+    <form (ngSubmit)="onCrate()" novalidate #f="ngForm">
+        <div>
+            <h3 class="subtitle">Titulo:</h3>
+            <input type="text" id="education" name="education" placeholder="Educacion" [(ngModel)]="education" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Institucion:</h3>
+            <input type="text" id="institution" name="institution" placeholder="Institucion" [(ngModel)]="institution" required>
+        </div>
+        <button type="submit" class="submit">Añadir</button>
+    </form>
+</div>
