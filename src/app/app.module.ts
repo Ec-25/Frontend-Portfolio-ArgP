@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor.service';
 import { NewExperienceComponent } from './components/experience/new-experience.component';
 import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { EditPersonComponent } from './components/head/edit-person.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EditExperienceComponent } from './components/experience/edit-experience
     HomeComponent,
     LoginComponent,
     NewExperienceComponent,
-    EditExperienceComponent
+    EditExperienceComponent,
+    EditPersonComponent
   ],
   imports: [
     BrowserModule,

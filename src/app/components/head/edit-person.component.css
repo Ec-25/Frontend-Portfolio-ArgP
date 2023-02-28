@@ -1,0 +1,104 @@
+div.card {
+    width: 60vw;
+    margin: 5vh auto 5vh auto;
+    background-color: var(--bg-card);
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    border-radius: 36px;
+    border-color: transparent;
+    background-color: var(--bg-body2);
+    text-indent: 24px;
+    font-size: 18px;
+}
+
+input#photo {
+    padding-top: 6px;
+}
+
+textarea {
+    width: 90%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: -2px 2px 2px rgba(0,0,0,0.5);
+    border-radius: 36px;
+    border-color: transparent;
+    background-color: var(--bg-body2);
+    text-indent: 24px;
+    font-size: 18px;
+    resize: none;
+}
+
+textarea
+
+input:focus-visible {
+    height: 42px;
+    border-radius: 42px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+}
+
+form button.submit {
+    width: 90%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 36px auto;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+    border-radius: 36px;
+    border-color: transparent;
+    background-color: #31cfff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+form button.submit:hover,
+form button.submit:focus-visible {
+    height: 48px;
+    background-color: #319bff;
+}
+
+.more {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 48px auto;
+}
+
+button.home {
+    position: fixed;
+    top: 0;
+    margin-top: 2%;
+    margin-left: 2%;
+    display: flex;
+    padding: 12px;
+    background-color: #31cfff;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.6);
+    border-color: transparent;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+button.home:hover,
+button.home:focus-visible {
+    background-color: #319bff;
+}

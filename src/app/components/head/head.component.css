@@ -5,6 +5,27 @@
     box-shadow: 4px 4px 4px rgba(0,0,0,.5);
 }
 
+button {
+    width: 30%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 36px;
+    border-color: transparent;
+    background-color: var(--bg-global);
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+button:hover,
+button:focus-visible {
+    width: 40%;
+    background-color: var(--bg-press-global);
+}
+
 .profile {
     position: absolute;
     top: 500px;
@@ -29,5 +50,5 @@
 .labels>p {
     margin-top: 98px;
     margin-left: 576px;
-    margin-bottom: 56px;
+    margin-bottom: 26px;
 }
