@@ -69,5 +69,5 @@ table>tbody>tr>td.action>button {
 table>tbody>tr>td.action>button:hover,
 table>tbody>tr>td.action>button:focus-visible {
     height: 36px;
-    width: 100%;
+    width: 36px;
 }

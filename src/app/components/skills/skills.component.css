@@ -1,0 +1,46 @@
+button {
+    width: 75%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    border-radius: 36px;
+    border-color: transparent;
+    background-color: var(--bg-global);
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+button:hover,
+button:focus-visible {
+    height: 48px;
+    background-color: var(--bg-press-global);
+}
+
+button.action {
+    height: 38px;
+    width: 38px;
+    margin: 0;
+}
+
+button.action:hover,
+button.action:focus-visible {
+    height: 48px;
+    width: 48px;
+}
+
+.more,
+.progress {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.circle {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}

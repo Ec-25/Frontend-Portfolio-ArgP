@@ -1,4 +1,34 @@
 <div class="card" id="skills">
     <h1 class="title">Habilidades</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio dignissimos neque eligendi, consequuntur nobis laudantium earum suscipit enim doloribus deleniti minus non omnis reiciendis. Beatae non quos similique reiciendis commodi officiis pariatur molestias enim corrupti veniam omnis eius, laborum itaque nam, cumque cum exercitationem veritatis facilis, ipsum eveniet distinctio. Voluptatum reiciendis repellendus quod a exercitationem, illo recusandae! Labore perferendis eaque nihil voluptates, ducimus cum. Ipsum consequuntur beatae aut! Culpa nisi impedit odio animi fugiat delectus omnis. Harum soluta nihil distinctio quos laudantium minima nesciunt sequi ipsa sunt beatae cupiditate incidunt, est earum rerum facilis eveniet? Obcaecati hic ad dolores eum maxime corrupti officiis aut asperiores doloremque similique id quis aliquam numquam mollitia animi consectetur perferendis ducimus labore, in voluptate. Doloremque similique recusandae corrupti autem?</p>
+    <button type="button" *ngIf="isLogged" routerLink="add-skill">Añadir Habilidad</button>
+    <div class="circle">
+      <div *ngFor="let skl of skill">
+        <circle-progress class="progress" [percent]="(skl.percentage)"
+                        [radius]="60"
+                        [showUnits]="false"
+                        [title]="(skl.name)"
+                        [titleFontSize]="'18'"
+                        [showTitle]="true"
+                        [imageSrc]="''"
+                        [showImage]="false"
+                        [imageHeight]="48"
+                        [imageWidth]="48"
+                        [showSubtitle]="false"
+                        [outerStrokeWidth]="8"
+                        [innerStrokeWidth]="4"
+                        [outerStrokeColor]="'#319bff'"
+                        [innerStrokeColor]="'#31cfff'"
+                        [animation]="false"
+        ></circle-progress>
+
+      <div class="more" *ngIf="isLogged">
+        <button class="action" type="button" routerLink="/upd-skill/{{skl.id}}">
+            <img src="assets/icons/edit-3.svg" alt="edit">
+          </button>
+        <button class="action" type="button" (click)="delete(skl.id)">
+            <img src="assets/icons/trash-2.svg" alt="delete">
+          </button>
+      </div>
+    </div>
+    </div>
 </div>

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeadComponent } from './components/head/head.component';
 import { FormsModule } from '@angular/forms';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
@@ -22,6 +23,8 @@ import { EditExperienceComponent } from './components/experience/edit-experience
 import { EditPersonComponent } from './components/head/edit-person.component';
 import { NewEducationComponent } from './components/education/new-education.component';
 import { EditEducationComponent } from './components/education/edit-education.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,16 @@ import { EditEducationComponent } from './components/education/edit-education.co
     EditExperienceComponent,
     EditPersonComponent,
     NewEducationComponent,
-    EditEducationComponent
+    EditEducationComponent,
+    EditSkillComponent,
+    NewSkillComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [
     interceptorProvider

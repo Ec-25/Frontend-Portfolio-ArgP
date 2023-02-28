@@ -1,0 +1,15 @@
+<button class="home" type="button" routerLink=""> <img src="assets/icons/arrow-up-left.svg" alt="arrow-left"> Volver</button>
+<div class="card">
+    <h1 class="title">Crear Habilidad</h1>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div>
+            <h3 class="subtitle">Nombre:</h3>
+            <input type="text" id="experience" name="experience" placeholder="Experiencia" [(ngModel)]="name" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Porcentaje:</h3>
+            <input type="number" id="percentage" name="percentage" placeholder="Porcentaje" [(ngModel)]="percentage" required>
+        </div>
+        <button type="submit" class="submit">Añadir</button>
+    </form>
+</div>
