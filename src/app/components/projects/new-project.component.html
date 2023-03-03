@@ -1,0 +1,27 @@
+<button class="home" type="button" routerLink=""> <img src="assets/icons/arrow-up-left.svg" alt="arrow-left"> Volver</button>
+<div class="card">
+    <h1 class="title">Nuevo Proyecto</h1>
+    <form (ngSubmit)="onCrate()" novalidate #f="ngForm">
+        <div>
+            <h3 class="subtitle">Icono:</h3>
+            <input type="file" id="icon" name="icon" placeholder="Icono" [(ngModel)]="icon" required (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        </div>
+        <div>
+            <h3 class="subtitle">Nombre Proyecto:</h3>
+            <input type="text" id="project" name="project" placeholder="Proyecto" [(ngModel)]="project" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Texto:</h3>
+            <input type="text" id="text" name="text" placeholder="Texto" [(ngModel)]="text" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Link Repositorio:</h3>
+            <input type="text" id="link_gh" name="link_gh" placeholder="Link Repositorio" [(ngModel)]="link_gh" required>
+        </div>
+        <div>
+            <h3 class="subtitle">Link Pagina:</h3>
+            <input type="text" id="link_page" name="link_page" placeholder="Link Pagina" [(ngModel)]="link_page" required>
+        </div>
+        <button type="submit" class="submit">Crear</button>
+    </form>
+</div>

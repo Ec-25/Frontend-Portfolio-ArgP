@@ -29,4 +29,6 @@ export class EditPersonComponent implements OnInit{
       alert("Error al actualizar la Persona");
     })
   }
+
+  uploadImage($event:any) {}
 }

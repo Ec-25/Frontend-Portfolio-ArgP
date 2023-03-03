@@ -9,6 +9,8 @@ import { NewEducationComponent } from './components/education/new-education.comp
 import { EditEducationComponent } from './components/education/edit-education.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { NewProjectComponent } from './components/projects/new-project.component';
+import { EditProjectComponent } from './components/projects/edit-project.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'add-experience', component: NewExperienceComponent},
   {path: 'upd-experience/:id', component: EditExperienceComponent},
   {path: 'add-skill', component: NewSkillComponent},
-  {path: 'upd-skill/:id', component: EditSkillComponent}
+  {path: 'upd-skill/:id', component: EditSkillComponent},
+  {path: 'add-project', component: NewProjectComponent},
+  {path: 'upd-project/:id', component: EditProjectComponent}
 ];
 
 @NgModule({

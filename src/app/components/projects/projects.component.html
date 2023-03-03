@@ -1,4 +1,42 @@
 <div class="card" id="projects">
     <h1 class="title">Proyectos</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio dignissimos neque eligendi, consequuntur nobis laudantium earum suscipit enim doloribus deleniti minus non omnis reiciendis. Beatae non quos similique reiciendis commodi officiis pariatur molestias enim corrupti veniam omnis eius, laborum itaque nam, cumque cum exercitationem veritatis facilis, ipsum eveniet distinctio. Voluptatum reiciendis repellendus quod a exercitationem, illo recusandae! Labore perferendis eaque nihil voluptates, ducimus cum. Ipsum consequuntur beatae aut! Culpa nisi impedit odio animi fugiat delectus omnis. Harum soluta nihil distinctio quos laudantium minima nesciunt sequi ipsa sunt beatae cupiditate incidunt, est earum rerum facilis eveniet? Obcaecati hic ad dolores eum maxime corrupti officiis aut asperiores doloremque similique id quis aliquam numquam mollitia animi consectetur perferendis ducimus labore, in voluptate. Doloremque similique recusandae corrupti autem?</p>
+    <button type="button" *ngIf="isLogged" routerLink="add-project">Añadir Proyecto</button>
+    <table>
+        <tbody>
+          <tr class="head">
+            <td>#</td>
+            <td>Proyecto</td>
+            <td>Descripcion</td>
+            <td class="more">
+                <tr>Repositorio</tr>
+                <tr>Pagina</tr>
+            </td>
+            <td class="action" *ngIf="isLogged">
+                <tr>Editar</tr>
+                <tr>Borrar</tr>
+            </td>
+          </tr>
+          <tr *ngFor="let proj of project">
+            <td><img src="{{proj.icon}}" alt="{{proj.project}}"></td>
+            <td class="proj">{{proj.project}}</td>
+            <td class="text">{{proj.text}}</td>
+            <td class="more">
+               <tr><a href="{{proj.link_gh}}" target="_blank" rel="noopener noreferrer">Código</a></tr>
+               <tr><a href="{{proj.link_page}}" target="_blank" rel="noopener noreferrer">Pagina</a></tr>
+            </td>
+            <td class="action" *ngIf="isLogged">
+                <tr>
+                  <button type="button" routerLink="upd-project/{{proj.id}}">
+                    <img src="assets/icons/edit-3.svg" alt="edit">
+                  </button>
+                </tr>
+                <tr>
+                  <button type="button" (click)="deleteProject(proj.id)">
+                    <img src="assets/icons/trash-2.svg" alt="delete">
+                  </button>
+                </tr>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 </div>
