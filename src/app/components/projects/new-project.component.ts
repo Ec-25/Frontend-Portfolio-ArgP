@@ -18,7 +18,7 @@ export class NewProjectComponent {
   constructor(private servProject: ProjectService, private router: Router) {}
 
   onCrate():void {
-    if(this.icon != "" && this.project != "" && this.text != "" && this.link_gh != "") {
+    if(this.project != "" && this.text != "" && this.link_gh != "") {
       const proj = new Project(this.icon, this.project, this.text, this.link_gh, this.link_page);
       this.servProject.save(proj).subscribe(data => {
         alert("Proyecto Añadida");
@@ -28,8 +28,6 @@ export class NewProjectComponent {
       });
     } else if (this.icon == "" && this.project == "" && this.text == "" && this.link_gh == "") {
       alert("Los campos no pueden estar vacios")
-    } else if (this.icon == "") {
-      alert("El Icono no puede estar vacio")
     } else if (this.project == "") {
       alert("El Titulo no puede estar vacio")
     } else if (this.text == "") {

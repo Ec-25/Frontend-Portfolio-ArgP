@@ -27,6 +27,12 @@ export class ProjectsComponent implements OnInit {
   loadProject(): void {
     this.serviceProject.getList().subscribe(data => {
       this.project = data;
+      for (let index = 0; index < this.project.length; index++) {
+        let element = this.project[index];
+        if(element.icon == null || element.icon == "") {
+          this.project[index].icon = "assets/logos/project.png";
+        }
+      }
     })
   }
 
