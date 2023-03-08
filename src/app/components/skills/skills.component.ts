@@ -10,16 +10,17 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class SkillsComponent implements OnInit{
   skill: Skill[] = [];
-  isLogged = false;
+  isAdmin = false;
 
   constructor(private skillS: SkillService, private tokenService: TokenService) {}
 
   ngOnInit(): void {
     this.cargarSkills();
-    if(this.tokenService.getToken()){
-      this.isLogged = true;
+    // If you are logged in and also have administrator permissions, you are allowed to edit the content
+    if (this.tokenService.getToken() && this.tokenService.getAuthorities().includes("ROLE_ADMIN")) {
+      this.isAdmin = true;
     } else {
-      this.isLogged = false;
+      this.isAdmin = false;
     }
   }
 

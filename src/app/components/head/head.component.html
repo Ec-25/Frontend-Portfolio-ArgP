@@ -7,7 +7,7 @@
         <img src="{{person.photo}}" alt="Profile">
         <h5>{{person.name}}</h5>
         <h6>{{person.title}}</h6>
-        <button type="button" routerLink="upd-person/" *ngIf="isLogged">Editar <img src="assets/icons/edit-3.svg" alt="edit"> </button>
+        <button type="button" routerLink="upd-person/" *ngIf="isAdmin">Editar <img src="assets/icons/edit-3.svg" alt="edit"> </button>
     </div>
     <div class="labels" id="labels">
         <p>{{person.labels}}</p>

@@ -13,14 +13,15 @@ export class EducationComponent implements OnInit{
 
   constructor(private serviceEducation: EducationService, private tokenService: TokenService) { }
 
-  isLogged = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.loadEducation();
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
+    // If you are logged in and also have administrator permissions, you are allowed to edit the content
+    if (this.tokenService.getToken() && this.tokenService.getAuthorities().includes("ROLE_ADMIN")) {
+      this.isAdmin = true;
     } else {
-      this.isLogged = false;
+      this.isAdmin = false;
     }
   }
 

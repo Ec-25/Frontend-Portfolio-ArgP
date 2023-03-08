@@ -1,6 +1,6 @@
 <div class="card" id="skills">
     <h1 class="title">Habilidades</h1>
-    <button type="button" *ngIf="isLogged" routerLink="add-skill">Añadir Habilidad</button>
+    <button type="button" *ngIf="isAdmin" routerLink="add-skill">Añadir Habilidad</button>
     <div class="circle">
       <div *ngFor="let skl of skill">
         <circle-progress class="progress" [percent]="(skl.percentage)"
@@ -21,7 +21,7 @@
                         [animation]="false"
         ></circle-progress>
 
-      <div class="more" *ngIf="isLogged">
+      <div class="more" *ngIf="isAdmin">
         <button class="action" type="button" routerLink="/upd-skill/{{skl.id}}">
             <img src="assets/icons/edit-3.svg" alt="edit">
           </button>

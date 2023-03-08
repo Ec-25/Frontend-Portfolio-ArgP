@@ -1,23 +1,23 @@
 <div class="card" id="experience">
   <h1 class="title">Experiencia</h1>
-  <button type="button" *ngIf="isLogged" routerLink="add-experience">Añadir Experiencia</button>
+  <button type="button" *ngIf="isAdmin" routerLink="add-experience">Añadir Experiencia</button>
   <table>
     <tbody>
       <tr class="head">
         <td>Labor</td>
         <td>Descripcion</td>
-        <td class="action" *ngIf="isLogged">Editar</td>
-        <td class="action" *ngIf="isLogged">Borrar</td>
+        <td class="action" *ngIf="isAdmin">Editar</td>
+        <td class="action" *ngIf="isAdmin">Borrar</td>
       </tr>
       <tr *ngFor="let exp of experience">
         <td>{{exp.experience}}</td>
         <td>{{exp.description}}</td>
-        <td class="action" *ngIf="isLogged">
+        <td class="action" *ngIf="isAdmin">
           <button type="button" routerLink="/upd-experience/{{exp.id}}">
             <img src="assets/icons/edit-3.svg" alt="edit">
           </button>
         </td>
-        <td class="action" *ngIf="isLogged">
+        <td class="action" *ngIf="isAdmin">
           <button type="button" (click)="deleteExperience(exp.id)">
             <img src="assets/icons/trash-2.svg" alt="delete">
           </button>

@@ -12,7 +12,7 @@
                 <input type="text" id="title" name="title" placeholder="Titulo" [(ngModel)]="person.title" required>
             </div>
             <div>
-                <h3 class="subtitle">Photo:</h3>
+                <h3 class="subtitle">Foto:</h3>
                 <input type="file" id="photo" name="photo" placeholder="Foto" [(ngModel)]="person.photo" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
             </div>
             <div>

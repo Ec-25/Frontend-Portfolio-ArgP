@@ -13,14 +13,15 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private serviceProject: ProjectService, private tokenService: TokenService) { }
 
-  isLogged = false;
+  isAdmin = false;
 
   ngOnInit(): void {
     this.loadProject();
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
+    // If you are logged in and also have administrator permissions, you are allowed to edit the content
+    if (this.tokenService.getToken() && this.tokenService.getAuthorities().includes("ROLE_ADMIN")) {
+      this.isAdmin = true;
     } else {
-      this.isLogged = false;
+      this.isAdmin = false;
     }
   }
 

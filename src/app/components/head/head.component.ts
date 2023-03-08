@@ -10,19 +10,21 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class HeadComponent implements OnInit{
   person: person = new person("","","","","");
-  isLogged = false;
+  isAdmin = false;
 
   constructor(public personService: PersonService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
+    // If you are logged in and also have administrator permissions, you are allowed to edit the content
+    if (this.tokenService.getToken() && this.tokenService.getAuthorities().includes("ROLE_ADMIN")) {
+      this.isAdmin = true;
     } else {
-      this.isLogged = false;
+      this.isAdmin = false;
     }
+
     this.personService.getUser().subscribe(data => {
       this.person = data;
-      if(this.person.photo == ""){
+      if(this.person.photo == "" || this.person.photo == null){
         this.person.photo = "assets/logos/account.png";
       }
       if(this.person.labels.length < 94) {

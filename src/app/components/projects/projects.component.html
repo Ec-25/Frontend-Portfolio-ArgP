@@ -1,6 +1,6 @@
 <div class="card" id="projects">
     <h1 class="title">Proyectos</h1>
-    <button type="button" *ngIf="isLogged" routerLink="add-project">Añadir Proyecto</button>
+    <button type="button" *ngIf="isAdmin" routerLink="add-project">Añadir Proyecto</button>
     <table>
         <tbody>
           <tr class="head">
@@ -11,7 +11,7 @@
                 <tr>Repositorio</tr>
                 <tr>Pagina</tr>
             </td>
-            <td class="action" *ngIf="isLogged">
+            <td class="action" *ngIf="isAdmin">
                 <tr>Editar</tr>
                 <tr>Borrar</tr>
             </td>
@@ -22,9 +22,9 @@
             <td class="text">{{proj.text}}</td>
             <td class="more">
                <tr><a href="{{proj.link_gh}}" target="_blank" rel="noopener noreferrer">Código</a></tr>
-               <tr><a href="{{proj.link_page}}" target="_blank" rel="noopener noreferrer">Pagina</a></tr>
+               <tr *ngIf="proj.link_page != null"><a href="{{proj.link_page}}" target="_blank" rel="noopener noreferrer">Pagina</a></tr>
             </td>
-            <td class="action" *ngIf="isLogged">
+            <td class="action" *ngIf="isAdmin">
                 <tr>
                   <button type="button" routerLink="upd-project/{{proj.id}}">
                     <img src="assets/icons/edit-3.svg" alt="edit">
