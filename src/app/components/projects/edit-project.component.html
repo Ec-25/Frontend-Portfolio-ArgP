@@ -3,10 +3,6 @@
     <h1 class="title">Actualizar Proyecto</h1>
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div>
-            <h3 class="subtitle">Icono:</h3>
-            <input type="file" id="icon" name="icon" placeholder="Icono" [(ngModel)]="project.icon" required (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
-        </div>
-        <div>
             <h3 class="subtitle">Nombre Proyecto:</h3>
             <input type="text" id="project" name="project" placeholder="Proyecto" [(ngModel)]="project.project" required>
         </div>
@@ -20,7 +16,11 @@
         </div>
         <div>
             <h3 class="subtitle">Link Pagina:</h3>
-            <input type="text" id="link_page" name="link_page" placeholder="Link Pagina" [(ngModel)]="project.link_page" required>
+            <input type="text" id="link_page" name="link_page" placeholder="Link Pagina" [(ngModel)]="project.link_page" >
+        </div>
+        <div>
+            <h3 class="subtitle">Icono:</h3>
+            <input type="file" id="icon" name="icon" placeholder="Icono" (ngModel)="project.icon" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
         </div>
         <button type="submit" class="submit">Actualizar</button>
     </form>

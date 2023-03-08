@@ -22,7 +22,7 @@
             <td class="text">{{proj.text}}</td>
             <td class="more">
                <tr><a href="{{proj.link_gh}}" target="_blank" rel="noopener noreferrer">Código</a></tr>
-               <tr *ngIf="proj.link_page != null"><a href="{{proj.link_page}}" target="_blank" rel="noopener noreferrer">Pagina</a></tr>
+               <tr><a href="{{proj.link_page}}" target="_blank" rel="noopener noreferrer" *ngIf="proj.link_page != null && proj.link_page != ''">Pagina</a></tr>
             </td>
             <td class="action" *ngIf="isAdmin">
                 <tr>

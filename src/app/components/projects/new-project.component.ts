@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from 'src/app/model/project';
+import { ImageService } from 'src/app/service/image.service';
 import { ProjectService } from 'src/app/service/project.service';
 
 @Component({
@@ -9,24 +10,29 @@ import { ProjectService } from 'src/app/service/project.service';
   styleUrls: ['./styleOfOutProject.css']
 })
 export class NewProjectComponent {
-  icon:string = "";
+  icon: boolean = false ;
   project:string = "";
   text:string = "";
   link_gh:string = "";
   link_page:string = "";
 
-  constructor(private servProject: ProjectService, private router: Router) {}
+  constructor(private servProject: ProjectService, private router: Router, public imageServ: ImageService) {}
 
   onCrate():void {
     if(this.project != "" && this.text != "" && this.link_gh != "") {
-      const proj = new Project(this.icon, this.project, this.text, this.link_gh, this.link_page);
+      let proj;
+      if(this.icon) {
+        proj = new Project(this.imageServ.url, this.project, this.text, this.link_gh, this.link_page);
+      } else {
+        proj = new Project("", this.project, this.text, this.link_gh, this.link_page);
+      }
       this.servProject.save(proj).subscribe(data => {
         alert("Proyecto Añadida");
         this.router.navigate(['']);
       }, err => {
         alert("Error al Crear Proyecto");
       });
-    } else if (this.icon == "" && this.project == "" && this.text == "" && this.link_gh == "") {
+    } else if (this.project == "" && this.text == "" && this.link_gh == "") {
       alert("Los campos no pueden estar vacios")
     } else if (this.project == "") {
       alert("El Titulo no puede estar vacio")
@@ -37,5 +43,9 @@ export class NewProjectComponent {
     }
   }
 
-  uploadImage($event:any) {}
+  uploadImage($event:any) {
+    let name = "project_" + this.project;
+    this.imageServ.uploadImage($event, name);
+    this.icon = true;
+  }
 }

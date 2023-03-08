@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { person } from 'src/app/model/person.model';
+import { ImageService } from 'src/app/service/image.service';
 import { PersonService } from 'src/app/service/person.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { PersonService } from 'src/app/service/person.service';
 export class EditPersonComponent implements OnInit{
   person:person = null;
 
-  constructor(private servicePerson: PersonService, private router: Router) {}
+  constructor(private servicePerson: PersonService, private router: Router, public imageServ: ImageService) {}
 
   ngOnInit(): void {
     this.servicePerson.getUser().subscribe(data => {
@@ -22,6 +23,7 @@ export class EditPersonComponent implements OnInit{
   }
 
   onUpdate(): void {
+    this.person.photo = this.imageServ.url;
     this.servicePerson.update(this.person).subscribe(data => {
       this.router.navigate(['']);
       alert("Persona Actualizada");
@@ -30,5 +32,7 @@ export class EditPersonComponent implements OnInit{
     })
   }
 
-  uploadImage($event:any) {}
+  uploadImage($event:any) {
+    this.imageServ.uploadImage($event, 'photoUser');
+  }
 }
