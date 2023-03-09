@@ -48,7 +48,90 @@ button:focus-visible {
 }
 
 .labels>p {
-    margin-top: 98px;
-    margin-left: 576px;
-    margin-bottom: 26px;
+    margin-top: 36px;
+    margin-left: 34vw;
+    margin-bottom: 8vh;
+}
+
+/* XX-Large */
+@media (max-width: 1399px) {
+    .labels>p {
+        margin-left: 38vw;
+    }
+}
+
+/* X-Large */
+@media (max-width: 1199px) {
+    .profile {
+        left: 7vw;
+    }
+    .labels>p {
+        margin-left: 42vw;
+    }
+}
+
+/* Large */
+@media (max-width: 991px) {
+    .profile {
+        left: 5vw;
+    }
+    .labels>p {
+        margin-left: 48vw;
+    }
+}
+
+/* Medium */
+@media (max-width: 767px) {
+    .profile {
+        left: 2vw;
+    }
+    .profile>h5 {
+        margin-left: 42px;
+    }
+    .profile>h6 {
+        margin-left: 64px;
+    }
+    .labels>p {
+        margin-left: 50vw;
+    }
+}
+
+/* Small */
+@media (max-width: 575px) {
+    .banner>img {
+        height: 500px;
+    }
+    .profile {
+        position: absolute;
+        top: 400px;
+        left: 27vw;
+    }
+    .profile>h5 {
+        margin-left: 32px;
+    }
+    .profile>h6 {
+        margin-left: 56px;
+    }
+    .labels>p {
+        margin: 180px 0 40px 6vh;
+    }
+}
+
+/* Extra-Small */
+@media (max-width: 424px) {
+    .profile {
+        position: absolute;
+        top: 400px;
+        left: 15vw;
+    }
+    .profile>h5 {
+        margin-left: 28px;
+    }
+    .profile>h6 {
+        margin-left: 48px;
+    }
+    .labels>p {
+        font-size: large;
+        margin: 180px 0 40px 6vh;
+    }
 }

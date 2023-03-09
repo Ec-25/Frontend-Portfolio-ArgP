@@ -26,3 +26,24 @@ nav>a {
 nav>a:hover {
     background-color: var(--bg-press-global);
 }
+
+@media (max-width: 767px) {
+    nav>a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 589px) {
+    nav>a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 448px) {
+    nav {
+        grid-template-columns: 33% 33% 33%;
+    }
+    nav>a {
+        font-size: 14px;
+    }
+}
