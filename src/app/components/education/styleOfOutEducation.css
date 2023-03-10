@@ -80,3 +80,9 @@ button.home:hover,
 button.home:focus-visible {
     background-color: #319bff;
 }
+
+@media (max-width: 960px) {
+    div.card {
+        width: 96%;
+    }
+}

@@ -163,4 +163,7 @@ li {
     width: 97%;
     margin-left: 2%;
   }
+  .title {
+    font-size: 42px;
+  }
 }

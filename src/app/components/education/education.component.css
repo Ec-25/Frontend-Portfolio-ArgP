@@ -53,21 +53,42 @@ table>tbody>tr.head>td {
     padding: 0;
 }
 
-table>tbody>tr>td.action {
-    font-size: 14px;
-}
-
-table>tbody>tr.head>td.action {
-    font-size: 18px;
+table>tbody>tr.head>td.action>img {
+    padding: 4px;
 }
 
 table>tbody>tr>td.action>button {
     margin: 0;
-
+    margin-right: 4px;
+    padding: 0 8px;
 }
 
 table>tbody>tr>td.action>button:hover,
 table>tbody>tr>td.action>button:focus-visible {
     height: 36px;
     width: 100%;
+}
+
+@media (max-width: 700px) {
+    table>tbody>tr {
+        width: 100%;
+        height: 64px;
+        grid-template-columns: 35% 45% 10% 10%;
+    }
+}
+
+@media (max-width: 456px) {
+    table>tbody>tr {
+        width: 100%;
+    }
+    table>tbody>tr>td {
+        font-size: 12px;
+        border-radius: 18px;
+        padding: 0 6px;
+    }
+    
+    table>tbody>tr.head>td {
+        font-size: 14px;
+        padding: 0;
+    }
 }

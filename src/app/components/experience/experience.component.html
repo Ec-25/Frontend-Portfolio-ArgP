@@ -6,8 +6,12 @@
       <tr class="head">
         <td>Labor</td>
         <td>Descripcion</td>
-        <td class="action" *ngIf="isAdmin">Editar</td>
-        <td class="action" *ngIf="isAdmin">Borrar</td>
+        <td class="action" *ngIf="isAdmin">
+          <img src="assets/icons/edit-3.svg" alt="edit">
+        </td>
+        <td class="action" *ngIf="isAdmin">
+          <img src="assets/icons/trash-2.svg" alt="delete">
+        </td>
       </tr>
       <tr *ngFor="let exp of experience">
         <td>{{exp.experience}}</td>

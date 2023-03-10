@@ -44,3 +44,15 @@ button.action:focus-visible {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
+
+@media (max-width: 767px) {
+    .circle{
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 375px) {
+    .circle{
+        grid-template-columns: 50% 50%;
+    }
+}
