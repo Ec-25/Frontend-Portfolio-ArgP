@@ -12,17 +12,14 @@ button {
     font-size: 18px;
     transition: all 0.2s;
 }
-
 button:hover,
 button:focus-visible {
     height: 48px;
     background-color: var(--bg-press-global);
 }
-
 table {
     width: 100%;
 }
-
 table>tbody>tr {
     width: 95%;
     height: 81px;
@@ -31,77 +28,62 @@ table>tbody>tr {
     border-radius: 32px;
     align-items: center;
     margin: auto auto 12px auto;
-
     background-color: var(--bg-body2);
 }
-
 table>tbody>tr.head {
     background-color: var(--bg-global);
     margin-top: 0;
     text-align: center;
 }
-
-
 table>tbody>tr>td {
     font-size: 18px;
     border-radius: 28px;
     padding: 0 12px;
 }
-
 table>tbody>tr>td.img>img {
     width: 81px;
     height: 81px;
     border-radius: 32px;
 }
-
 table>tbody>tr>td.proj {
     font-size: 26px;
     font-weight: bold;
     text-decoration: underline;
 }
-
 table>tbody>tr>td.text {
     font-size: 18px;
 }
-
 table>tbody>tr.head>td {
     font-size: 28px;
     padding: 0;
 }
-
 table>tbody>tr>td.more>tr,
 table>tbody>tr>td.action>tr {
     font-size: 14px;
 }
-
 table>tbody>tr.head>td.more>tr,
 table>tbody>tr.head>td.action>tr {
     font-size: 18px;
 }
-
 table>tbody>tr>td.action>tr>button {
     margin: 0;
     width: 32px;
     height: 32px;
 
 }
-
 table>tbody>tr>td.action>tr>button:hover,
 table>tbody>tr>td.action>tr>button:focus-visible {
     width: 64px;
 }
-
 table>tbody>tr>td.more>tr>a {
     font-size: 18px;
     color: #0051ff;
     text-decoration: none;
 }
-
 table>tbody>tr>td.more>tr>a:hover {
     text-decoration: underline;
     font-size: 20px;
 }
-
 @media (max-width: 1440px) {
     table>tbody>tr {
         width: 100%;
@@ -112,7 +94,6 @@ table>tbody>tr>td.more>tr>a:hover {
         margin-left: 24px;
     }
 }
-
 @media (max-width: 1024px) {
     table>tbody>tr {
         height: 72px;
@@ -125,7 +106,6 @@ table>tbody>tr>td.more>tr>a:hover {
         font-size: 14px;
     }
 }
-
 @media (max-width: 680px) {
     table>tbody>tr.head>td {
         font-size: 20px;
@@ -139,7 +119,6 @@ table>tbody>tr>td.more>tr>a:hover {
         font-size: 20px;
     }
 }
-
 @media (max-width: 476px) {
     table>tbody>tr.head>td {
         font-size: 14px;

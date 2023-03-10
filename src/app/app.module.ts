@@ -30,6 +30,7 @@ import { EditProjectComponent } from './components/projects/edit-project.compone
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditSkillComponent,
     NewSkillComponent,
     NewProjectComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

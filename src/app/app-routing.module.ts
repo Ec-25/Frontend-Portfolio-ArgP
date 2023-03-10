@@ -11,6 +11,7 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewProjectComponent } from './components/projects/new-project.component';
 import { EditProjectComponent } from './components/projects/edit-project.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'add-skill', component: NewSkillComponent},
   {path: 'upd-skill/:id', component: EditSkillComponent},
   {path: 'add-project', component: NewProjectComponent},
-  {path: 'upd-project/:id', component: EditProjectComponent}
+  {path: 'upd-project/:id', component: EditProjectComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({
