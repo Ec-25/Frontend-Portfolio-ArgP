@@ -133,13 +133,16 @@ table>tbody>tr>td.more>tr>a:hover {
     }
     table>tbody>tr {
         width: 80vw;
-        height: 62px;
+        height: 100px;
     }
     table>tbody>tr>td.text {
-        font-size: 18px;
+        font-size: 9px;
         margin-left: 0;
     }
     table>tbody>tr>td.proj {
-        font-size: 18px;
+        font-size: 10px;
+    }
+    table>tbody>tr>td.more>tr>a {
+        font-size: 8px;
     }
 }

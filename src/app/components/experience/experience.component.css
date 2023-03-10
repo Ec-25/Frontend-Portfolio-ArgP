@@ -82,14 +82,14 @@ table>tbody>tr>td.action>button:focus-visible {
 
 @media (max-width: 700px) {
     table>tbody>tr {
-        height: 64px;
+        height: 67px;
         grid-template-columns: 35% 45% 10% 10%;
     }
 }
 
 @media (max-width: 456px) {
     table>tbody>tr {
-        height: 72;
+        height: 81;
     }
     table>tbody>tr>td {
         font-size: 12px;
