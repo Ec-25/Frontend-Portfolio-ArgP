@@ -118,10 +118,13 @@ button:focus-visible {
 }
 
 /* Extra-Small */
-@media (max-width: 424px) {
+@media (max-width: 425px) {
+    .banner>img {
+        height: 400px;
+    }
     .profile {
         position: absolute;
-        top: 400px;
+        top: 360px;
         left: 15vw;
     }
     .profile>h5 {
@@ -131,7 +134,7 @@ button:focus-visible {
         margin-left: 48px;
     }
     .labels>p {
-        font-size: large;
-        margin: 180px 0 40px 6vh;
+        font-size: 14px;
+        margin: 240px 0 40px 6vh;
     }
 }

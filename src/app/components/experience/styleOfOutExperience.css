@@ -81,8 +81,13 @@ button.home:focus-visible {
     background-color: #319bff;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 1024px) {
     div.card {
-        width: 96%;
+        width: 70%;
+    }
+}
+@media (max-width: 375px) {
+    form>div>h3 {
+        font-size: 24px;
     }
 }

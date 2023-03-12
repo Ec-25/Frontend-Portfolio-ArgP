@@ -89,7 +89,7 @@ table>tbody>tr>td.action>button:focus-visible {
 
 @media (max-width: 456px) {
     table>tbody>tr {
-        height: 81;
+        height: 81px;
     }
     table>tbody>tr>td {
         font-size: 12px;
@@ -103,7 +103,7 @@ table>tbody>tr>td.action>button:focus-visible {
     }
 }
 
-@media (max-width: 337px) {
+@media (max-width: 384px) {
     table>tbody>tr {
         width: 80vw;
     }
